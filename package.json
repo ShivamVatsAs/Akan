@@ -1,0 +1,27 @@
+{
+  "name": "akanksha-birthday-wish",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A special birthday website for Akanksha from Shivam.",
+  "type": "module",
+  "main": "index.js",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run start --workspace=server\"",
+    "build": "npm run build --workspace=client"
+  },
+  "keywords": [],
+  "author": "Shivam",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
